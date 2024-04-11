@@ -1,15 +1,12 @@
 function solution(strings, n) {
   strings = strings.sort()
   let answer = []
-  let result = []
-  for (let x of strings) {
-    result.push(x[n])
-    result = Array.from(new Set(result)).sort()
-  }
-  for (let i = 0; i < strings.length; i++) {
-    for (let j = 0; j < strings.length; j++)
-      if (result[i] === strings[j][n]) answer.push(strings[j])
-  }
+  // strings.sort((a, b) => a.charCodeAt(n) - b.charCodeAt(n))
+  strings.sort((a, b) => a[n].localeCompare(b[n]))
+  answer = strings
 
   return answer
 }
+
+let str = ['sun', 'bed', 'car']
+console.log(solution(str, 1))
