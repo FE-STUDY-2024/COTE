@@ -1,6 +1,6 @@
 function solution(a, b) {
   let answer = ''
-  let sum = 0
+  let sum
   if (a >= 8 && a % 2 === 1) {
     sum = (a - 1) * 31 - Math.floor((a - 1) / 2) + b
   } else if (a === 1) {
@@ -21,7 +21,3 @@ function solution(a, b) {
 
   return answer
 }
-
-let a = 5
-let b = 1
-console.log(solution(a, b))
