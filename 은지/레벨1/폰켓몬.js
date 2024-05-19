@@ -5,6 +5,3 @@ function solution(nums) {
   answer = length < num ? length : num
   return answer
 }
-
-let nums = [3, 3, 3, 3]
-console.log(solution(nums))
